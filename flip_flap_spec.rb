@@ -62,7 +62,7 @@ describe 'application specs' do
   end
 
   after do
-    `rm data/test.* > /dev/null 2>&1`
+    #`rm data/test.* > /dev/null 2>&1` #秀出test去比對
   end
 end
 # rubocop: enable Metrics/BlockLength
