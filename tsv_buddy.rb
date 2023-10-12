@@ -13,8 +13,11 @@ module TsvBuddy
   end
 
   def to_tsv
-    record = "#{@data.first.keys.join("\t")}\n"
-    record2 = @data.map { |row| "#{row.values.join("\t")}\n" }
+    # record = "#{@data.first.keys.join("\t")}\n"
+    # record2 = @data.map { |row| "#{row.values.join("\t")}\n" }
+    # record + record2.join
+    record2 = @data.map {|row| row.values.join("\t") + "\n" }
+    record = @data.first.keys.join("\t") + "\n"
     record + record2.join
   end
 
